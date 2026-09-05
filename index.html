@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Online Tools — Unit Converter, PDF Tools, Image Compressor & More</title>
+<meta name="description" content="Free online tools for unit conversion, currency conversion, word counting, password generation, image compression, PDF merging and PDF splitting. Fast and easy to use.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#08111f">
+<meta name="author" content="ToolForge">
+<meta name="application-name" content="ToolForge">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebApplication",
+  "name":"ToolForge",
+  "description":"Free browser-based online tools for conversions, text, images and PDFs.",
+  "applicationCategory":"UtilitiesApplication",
+  "operatingSystem":"Any"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"ToolForge",
+  "description":"Free online tools for everyday tasks."
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon-32.png">
+<link rel="manifest" href="site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ToolForge — Free Online Tools">
+<meta property="og:description" content="Unit & currency conversion, word counter, password generator, image compressor, and PDF tools — free, no sign-up, runs in your browser.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ToolForge — Free Online Tools">
+<meta name="twitter:description" content="Unit & currency conversion, word counter, password generator, image compressor, and PDF tools — free, no sign-up.">
+<meta name="twitter:image" content="og-image.png">
+
+<style>
+html,body{margin:0;min-height:100%;background:#050b14;}
+body{padding:18px 14px;}
+@media(max-width:520px){body{padding:8px 6px;}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark; }
+
+  #tf-root {
+    --bg: #08111f;
+    --bg-soft: #0c1728;
+    --surface: rgba(15, 26, 45, 0.88);
+    --surface-strong: #111f35;
+    --surface-hover: #152742;
+    --border: rgba(148, 163, 184, 0.16);
+    --border-strong: rgba(148, 163, 184, 0.28);
+    --primary: #7c3aed;
+    --primary-2: #4f46e5;
+    --accent: #22c55e;
+    --accent-soft: rgba(34, 197, 94, 0.12);
+    --text: #f8fafc;
+    --text-soft: #cbd5e1;
+    --muted: #8fa3bd;
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    --shadow-soft: 0 12px 34px rgba(0, 0, 0, 0.22);
+
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    width: min(100%, 1280px);
+    margin: 0 auto;
+    padding: 34px 38px;
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    background:
+      radial-gradient(circle at 8% 0%, rgba(124, 58, 237, 0.22), transparent 32%),
+      radial-gradient(circle at 92% 10%, rgba(79, 70, 229, 0.18), transparent 28%),
+      linear-gradient(180deg, rgba(10, 20, 36, 0.98), rgba(7, 15, 28, 0.98));
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #tf-root::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+    background-size: 34px 34px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,.65), transparent 72%);
+  }
+
+  #tf-root * { box-sizing: border-box; }
+
+  .tf-header {
+    position: relative;
+    z-index: 1;
+    padding: 6px 4px 22px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tf-header::after,
+  .tf-header::before { display: none; }
+
+  .tf-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: #c4b5fd;
+    background: rgba(124, 58, 237, 0.12);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    border-radius: 999px;
+    padding: 7px 10px;
+    margin-bottom: 12px;
+  }
+
+  .tf-eyebrow::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 14px rgba(34, 197, 94, .7);
+  }
+
+  .tf-logo {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: clamp(34px, 6vw, 54px);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: .98;
+    color: var(--text);
+  }
+
+  .tf-logo .spark {
+    background: linear-gradient(90deg, #a78bfa, #818cf8 55%, #60a5fa);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .tf-tagline {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.65;
+    margin-top: 10px;
+    max-width: 760px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tf-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin-bottom: 18px;
+    background: rgba(6, 13, 25, 0.55);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+  }
+
+  .tf-nav-btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+    appearance: none;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    padding: 10px 12px;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
+  }
+
+  .tf-nav-btn::before { content: none; }
+
+  .tf-nav-btn:hover {
+    color: var(--text);
+    background: rgba(255,255,255,.045);
+    border-color: var(--border);
+    transform: translateY(-1px);
+  }
+
+  .tf-nav-btn.active {
+    color: #fff;
+    border-color: rgba(129, 140, 248, .35);
+    background: linear-gradient(135deg, rgba(124, 58, 237, .96), rgba(79, 70, 229, .96));
+    box-shadow: 0 8px 24px rgba(79, 70, 229, .22);
+  }
+
+  .tf-panel {
+    position: relative;
+    z-index: 1;
+    display: none;
+    padding: clamp(20px, 4vw, 30px);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: linear-gradient(180deg, rgba(17,31,53,.94), rgba(11,23,40,.94));
+    box-shadow: var(--shadow-soft), inset 0 1px 0 rgba(255,255,255,.025);
+    backdrop-filter: blur(14px);
+  }
+
+  .tf-panel.active { display: block; animation: tfFade .22s ease; }
+
+  @keyframes tfFade {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .tf-panel::before, .tf-panel::after,
+  .tf-panel .tf-corner-br, .tf-panel .tf-corner-bl { display: none; }
+
+  .tf-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 7px;
+  }
+
+  .tf-panel-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border: 1px solid rgba(167,139,250,.26);
+    border-radius: 9px;
+    background: rgba(124,58,237,.12);
+    color: #c4b5fd;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .tf-panel h3 {
+    margin: 0;
+    color: var(--text);
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: clamp(20px, 4vw, 27px);
+    font-weight: 750;
+    letter-spacing: -0.025em;
+  }
+
+  .tf-panel .desc {
+    color: var(--muted);
+    font-size: 12.5px;
+    line-height: 1.65;
+    margin: 0 0 22px 43px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tf-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .tf-input, .tf-select {
+    appearance: none;
+    background: rgba(6, 15, 28, .72);
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 11px 13px;
+    min-height: 44px;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+
+  .tf-input::placeholder { color: #667993; }
+
+  .tf-input:hover, .tf-select:hover { border-color: rgba(148, 163, 184, .38); }
+
+  .tf-input:focus, .tf-select:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, .13);
+    background: rgba(8, 18, 33, .95);
+  }
+
+  .tf-select {
+    padding-right: 34px;
+    background-image: linear-gradient(45deg, transparent 50%, #94a3b8 50%), linear-gradient(135deg, #94a3b8 50%, transparent 50%);
+    background-position: calc(100% - 15px) 19px, calc(100% - 10px) 19px;
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+  }
+
+  .tf-input.grow { flex: 1 1 180px; min-width: 150px; }
+
+  textarea.tf-input {
+    resize: vertical;
+    min-height: 150px;
+    width: 100%;
+    line-height: 1.65;
+  }
+
+  input[type='file'].tf-input {
+    width: 100%;
+    padding: 8px;
+    color: var(--muted);
+  }
+
+  input[type='file'].tf-input::file-selector-button {
+    margin-right: 12px;
+    border: 0;
+    border-radius: 9px;
+    padding: 8px 11px;
+    background: rgba(124,58,237,.16);
+    color: #ddd6fe;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  input[type='range'] { accent-color: #7c3aed; }
+  input[type='checkbox'] { accent-color: #7c3aed; }
+
+  .tf-btn {
+    appearance: none;
+    border: 1px solid rgba(167,139,250,.24);
+    border-radius: 12px;
+    padding: 11px 17px;
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .01em;
+    text-transform: none;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(79,70,229,.2);
+    transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+  }
+
+  .tf-btn:hover {
+    opacity: 1;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(79,70,229,.28);
+  }
+
+  .tf-btn:active { transform: translateY(0); }
+
+  .tf-result {
+    margin-top: 14px;
+    min-height: 47px;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(5, 13, 25, .58);
+    color: #dbeafe;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  .tf-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .tf-stat {
+    padding: 17px 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(6, 15, 28, .58);
+  }
+
+  .tf-stat .num {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #a78bfa;
+  }
+
+  .tf-stat .lbl {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tf-checkbox-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: rgba(255,255,255,.025);
+    color: var(--text-soft);
+    font-size: 11.5px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tf-preview-img {
+    display: block;
+    max-width: 100%;
+    margin-top: 14px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .tf-footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 28px;
+    padding: 26px 4px 4px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .tf-footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .tf-footer-brand {
+    font-family: 'Manrope', 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--text);
+    letter-spacing: -.03em;
+    margin-bottom: 8px;
+  }
+
+  .tf-footer-brand span { color: #a78bfa; }
+
+  .tf-footer-copy {
+    max-width: 520px;
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .tf-footer-title {
+    color: var(--text-soft);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    margin-bottom: 10px;
+  }
+
+  .tf-footer-links {
+    display: grid;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .tf-footer-links a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color .18s ease;
+  }
+
+  .tf-footer-links a:hover { color: #c4b5fd; }
+
+  .tf-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: #7186a1;
+    font-size: 10.5px;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: .03em;
+  }
+
+  .tf-trust-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+  }
+
+  .tf-trust-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.025);
+    color: var(--text-soft);
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  .tf-swap-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.03);
+    color: #a78bfa;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    transition: background .18s ease, transform .18s ease, border-color .18s ease;
+  }
+
+  .tf-swap-arrow:hover {
+    background: rgba(124,58,237,.12);
+    border-color: rgba(167,139,250,.32);
+    transform: rotate(180deg);
+  }
+
+  .tf-directory, .tf-content, .tf-faq { position:relative; z-index:1; margin-top:22px; }
+  .tf-section-kicker { color:#a78bfa; font:700 10px/1.2 'JetBrains Mono',monospace; letter-spacing:.13em; text-transform:uppercase; margin-bottom:8px; }
+  .tf-directory h2, .tf-content h2, .tf-faq h2 { margin:0; color:var(--text); font:800 clamp(22px,4vw,30px)/1.15 'Manrope',sans-serif; letter-spacing:-.025em; }
+  .tf-section-intro { max-width:780px; color:var(--muted); font-size:13px; line-height:1.7; margin:9px 0 16px; }
+  .tf-tool-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+  .tf-tool-card { text-align:left; min-height:135px; padding:15px; border:1px solid var(--border); border-radius:16px; background:rgba(6,15,28,.58); color:var(--text); cursor:pointer; transition:.18s ease; }
+  .tf-tool-card:hover { transform:translateY(-2px); border-color:rgba(167,139,250,.35); background:rgba(21,39,66,.72); }
+  .tf-tool-card span { display:block; color:#a78bfa; font:700 10px 'JetBrains Mono',monospace; margin-bottom:14px; }
+  .tf-tool-card strong { display:block; font:700 14px 'Inter',sans-serif; margin-bottom:6px; }
+  .tf-tool-card small { display:block; color:var(--muted); font:400 11px/1.55 'Inter',sans-serif; }
+  .tf-ad-placeholder { position:relative; z-index:1; min-height:72px; margin:20px 0; border:1px dashed rgba(148,163,184,.14); border-radius:14px; display:flex; align-items:center; justify-content:center; color:#5f7189; font:600 9px 'JetBrains Mono',monospace; letter-spacing:.1em; text-transform:uppercase; background:rgba(255,255,255,.012); }
+  .tf-content { display:grid; grid-template-columns:minmax(0,1.7fr) minmax(240px,.8fr); gap:20px; padding:24px 0 0; border-top:1px solid var(--border); }
+  .tf-content-main p, .tf-content-main li, .tf-faq p { color:var(--text-soft); font-size:13px; line-height:1.8; }
+  .tf-content-main h3 { color:var(--text); font:700 18px 'Manrope',sans-serif; margin:24px 0 6px; }
+  .tf-content-main ol { padding-left:20px; }
+  .tf-content-side { display:grid; gap:10px; align-content:start; }
+  .tf-side-card { padding:15px; border:1px solid var(--border); border-radius:14px; background:rgba(6,15,28,.48); }
+  .tf-side-card strong { display:block; color:#c4b5fd; font:700 13px 'Inter',sans-serif; margin-bottom:5px; }
+  .tf-side-card span { color:var(--muted); font:400 11px/1.6 'Inter',sans-serif; }
+  .tf-faq { padding:24px 0 0; border-top:1px solid var(--border); }
+  .tf-faq details { border-bottom:1px solid var(--border); padding:14px 2px; }
+  .tf-faq summary { cursor:pointer; color:var(--text-soft); font:600 13px 'Inter',sans-serif; }
+  .tf-faq p { margin:9px 0 0; }
+
+  @media (max-width: 900px) {
+    .tf-tool-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+
+  @media (max-width: 720px) {
+    #tf-root { padding: 18px; border-radius: 20px; }
+    .tf-footer-grid { grid-template-columns: 1fr; gap: 20px; }
+    .tf-content { grid-template-columns:1fr; }
+    .tf-tool-grid { grid-template-columns:1fr 1fr; }
+    .tf-nav { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .tf-nav-btn { min-width: 0; }
+    .tf-panel .desc { margin-left: 0; }
+    .tf-row > .tf-select { flex: 1 1 120px; }
+  }
+
+  @media (max-width: 520px) {
+    #tf-root { padding: 14px; border-radius: 16px; }
+    .tf-header { padding-bottom: 18px; }
+    .tf-nav { grid-template-columns: 1fr; padding: 6px; border-radius: 13px; }
+    .tf-panel { border-radius: 16px; padding: 18px; }
+    .tf-row { align-items: stretch; }
+    .tf-input.grow, .tf-select { width: 100%; flex: 1 1 100%; }
+    .tf-swap-arrow { align-self: center; transform: rotate(90deg); }
+    .tf-swap-arrow:hover { transform: rotate(270deg); }
+    .tf-stats-grid { grid-template-columns: 1fr; }
+    .tf-tool-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="tf-root">
+  <div class="tf-header">
+    <div class="tf-eyebrow">Free Online Tools • ToolForge</div>
+    <div class="tf-logo">TOOL<span class="spark">FORGE</span></div>
+    <div class="tf-tagline">Useful browser-based tools for everyday tasks — fast, simple, and free to use. No account required for the core tools.</div>
+    <div class="tf-trust-row">
+      <span class="tf-trust-chip">✓ No sign-up</span>
+      <span class="tf-trust-chip">✓ Free to use</span>
+      <span class="tf-trust-chip">✓ Browser-based</span>
+    </div>
+  </div>
+
+  <div class="tf-nav" id="tf-nav">
+    <button class="tf-nav-btn active" data-tool="converter">Unit Converter</button>
+    <button class="tf-nav-btn" data-tool="currency">Currency Converter</button>
+    <button class="tf-nav-btn" data-tool="wordcount">Word Counter</button>
+    <button class="tf-nav-btn" data-tool="password">Password Generator</button>
+    <button class="tf-nav-btn" data-tool="compressor">Image Compressor</button>
+    <button class="tf-nav-btn" data-tool="pdfmerge">PDF Merge</button>
+    <button class="tf-nav-btn" data-tool="pdfsplit">PDF Split</button>
+  </div>
+
+  <section class="tf-directory" aria-labelledby="tools-heading">
+    <div class="tf-section-kicker">TOOL DIRECTORY</div>
+    <h2 id="tools-heading">Free Online Tools for Everyday Tasks</h2>
+    <p class="tf-section-intro">Choose a tool below. Your browser handles the supported file and text operations locally, while the currency converter uses a live exchange-rate service.</p>
+    <div class="tf-tool-grid">
+      <button class="tf-tool-card" data-tool="converter"><span>01</span><strong>Unit Converter</strong><small>Convert length, weight and temperature units.</small></button>
+      <button class="tf-tool-card" data-tool="currency"><span>02</span><strong>Currency Converter</strong><small>Check exchange rates between supported currencies.</small></button>
+      <button class="tf-tool-card" data-tool="wordcount"><span>03</span><strong>Word Counter</strong><small>Count words, characters and sentences instantly.</small></button>
+      <button class="tf-tool-card" data-tool="password"><span>04</span><strong>Password Generator</strong><small>Create random passwords in your browser.</small></button>
+      <button class="tf-tool-card" data-tool="compressor"><span>05</span><strong>Image Compressor</strong><small>Reduce image size without uploading it.</small></button>
+      <button class="tf-tool-card" data-tool="pdfmerge"><span>06</span><strong>PDF Merge</strong><small>Combine multiple PDF files into one document.</small></button>
+      <button class="tf-tool-card" data-tool="pdfsplit"><span>07</span><strong>PDF Splitter</strong><small>Extract selected pages from a PDF file.</small></button>
+    </div>
+  </section>
+
+  <div class="tf-ad-placeholder" aria-label="Advertisement space">Advertisement</div>
+
+  <!-- UNIT CONVERTER -->
+  <div class="tf-panel active" data-panel="converter">
+    <div class="tf-panel-title"><span class="tf-panel-num">01</span><h3>Unit Converter</h3></div>
+    <div class="desc">Convert length, weight, and temperature units instantly.</div>
+    <div class="tf-row">
+      <select class="tf-select" id="uc-category">
+        <option value="length">Length</option>
+        <option value="weight">Weight</option>
+        <option value="temp">Temperature</option>
+      </select>
+    </div>
+    <div class="tf-row">
+      <input type="number" class="tf-input grow" id="uc-value" placeholder="Enter value" value="1">
+      <select class="tf-select" id="uc-from"></select>
+      <span class="tf-swap-arrow">→</span>
+      <select class="tf-select" id="uc-to"></select>
+    </div>
+    <div class="tf-result" id="uc-result">Result will appear here.</div>
+  </div>
+
+  <!-- CURRENCY CONVERTER -->
+  <div class="tf-panel" data-panel="currency">
+    <div class="tf-panel-title"><span class="tf-panel-num">02</span><h3>Currency Converter</h3></div>
+    <div class="desc">Convert currencies using live exchange rates.</div>
+    <div class="tf-row">
+      <input type="number" class="tf-input grow" id="cc-amount" placeholder="Amount" value="1">
+      <select class="tf-select" id="cc-from"></select>
+      <span class="tf-swap-arrow" id="cc-swap">⇄</span>
+      <select class="tf-select" id="cc-to"></select>
+    </div>
+    <button class="tf-btn" id="cc-convert-btn">Convert</button>
+    <div class="tf-result" id="cc-result">Result will appear here.</div>
+  </div>
+
+  <!-- WORD COUNTER -->
+  <div class="tf-panel" data-panel="wordcount">
+    <div class="tf-panel-title"><span class="tf-panel-num">03</span><h3>Word & Character Counter</h3></div>
+    <div class="desc">Paste or type text to see live word, character, and sentence counts.</div>
+    <textarea class="tf-input" id="wc-text" placeholder="Start typing or paste your text..."></textarea>
+    <div class="tf-stats-grid">
+      <div class="tf-stat"><div class="num" id="wc-words">0</div><div class="lbl">Words</div></div>
+      <div class="tf-stat"><div class="num" id="wc-chars">0</div><div class="lbl">Characters</div></div>
+      <div class="tf-stat"><div class="num" id="wc-sentences">0</div><div class="lbl">Sentences</div></div>
+    </div>
+  </div>
+
+  <!-- PASSWORD GENERATOR -->
+  <div class="tf-panel" data-panel="password">
+    <div class="tf-panel-title"><span class="tf-panel-num">04</span><h3>Password Generator</h3></div>
+    <div class="desc">Create a strong, random password directly in your browser.</div>
+    <div class="tf-row">
+      <label style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;">Length: <b id="pw-len-val" style="color:var(--text)">16</b></label>
+      <input type="range" id="pw-length" min="6" max="32" value="16" style="flex:1;">
+    </div>
+    <div class="tf-row">
+      <label class="tf-checkbox-row"><input type="checkbox" id="pw-upper" checked> Uppercase</label>
+      <label class="tf-checkbox-row"><input type="checkbox" id="pw-numbers" checked> Numbers</label>
+      <label class="tf-checkbox-row"><input type="checkbox" id="pw-symbols" checked> Symbols</label>
+    </div>
+    <button class="tf-btn" id="pw-generate">Generate</button>
+    <div class="tf-result" id="pw-result">Click generate to create a password.</div>
+  </div>
+
+  <!-- IMAGE COMPRESSOR -->
+  <div class="tf-panel" data-panel="compressor">
+    <div class="tf-panel-title"><span class="tf-panel-num">05</span><h3>Image Compressor</h3></div>
+    <div class="desc">Reduce image file size in your browser — nothing is uploaded.</div>
+    <input type="file" class="tf-input" id="ic-file" accept="image/*">
+    <div class="tf-row" style="margin-top:12px;">
+      <label style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;">Quality: <b id="ic-quality-val" style="color:var(--text)">70%</b></label>
+      <input type="range" id="ic-quality" min="10" max="100" value="70" style="flex:1;">
+    </div>
+    <img class="tf-preview-img" id="ic-preview" style="display:none;">
+    <div class="tf-result" id="ic-result">Choose an image to begin.</div>
+    <a class="tf-btn" id="ic-download" style="display:none;margin-top:10px;text-decoration:none;" href="#" download="compressed-image.jpg">Download compressed-image.jpg</a>
+  </div>
+
+  <!-- PDF MERGE -->
+  <div class="tf-panel" data-panel="pdfmerge">
+    <div class="tf-panel-title"><span class="tf-panel-num">06</span><h3>PDF Merge</h3></div>
+    <div class="desc">Combine as many PDF files as you need. Add 2, 3, 10 or more files, arrange them in your selected order, and remove any file with one click.</div>
+
+    <input type="file" class="tf-input" id="pm-files" accept="application/pdf" multiple>
+    <div id="pm-filelist" style="margin-top:12px;display:flex;flex-direction:column;gap:8px;"></div>
+    <div id="pm-empty" class="tf-result">No PDF files selected yet.</div>
+
+    <button class="tf-btn" id="pm-merge-btn" style="margin-top:10px;">Merge PDFs</button>
+    <div class="tf-result" id="pm-result"></div>
+  </div>
+
+  <!-- PDF SPLIT -->
+  <div class="tf-panel" data-panel="pdfsplit">
+    <div class="tf-panel-title"><span class="tf-panel-num">07</span><h3>PDF Split / Extract</h3></div>
+    <div class="desc">Extract selected PDF pages into a new file, e.g. “1-3,5”.</div>
+    <input type="file" class="tf-input" id="ps-file" accept="application/pdf">
+    <div class="tf-row" style="margin-top:10px;">
+      <input type="text" class="tf-input grow" id="ps-range" placeholder="Page range, e.g. 1-3,5">
+    </div>
+    <button class="tf-btn" id="ps-split-btn">Extract Pages</button>
+    <div class="tf-result" id="ps-result"></div>
+  </div>
+
+  <section class="tf-content" aria-labelledby="why-heading">
+    <div class="tf-content-main">
+      <div class="tf-section-kicker">ABOUT TOOLFORGE</div>
+      <h2 id="why-heading">Simple tools without unnecessary steps</h2>
+      <p>ToolForge is a small collection of practical online utilities built for common tasks. The goal is straightforward: open the page, choose the tool you need, do the task, and move on. The site does not require an account for the core browser-based tools.</p>
+      <p>For supported file tools, processing happens in your browser. That means an image selected for compression or a PDF selected for merging or splitting is handled on your device rather than uploaded to a ToolForge file server. The currency converter is different because it needs an external exchange-rate service to retrieve current rates.</p>
+      <h3>How to use ToolForge</h3>
+      <ol>
+        <li>Select a tool from the directory or navigation bar.</li>
+        <li>Enter your value, text or file according to the tool.</li>
+        <li>Review the result and download the generated file when available.</li>
+      </ol>
+    </div>
+    <aside class="tf-content-side">
+      <div class="tf-side-card"><strong>Fast</strong><span>Lightweight browser tools with no account flow.</span></div>
+      <div class="tf-side-card"><strong>Local processing</strong><span>Supported image and PDF operations run in your browser.</span></div>
+      <div class="tf-side-card"><strong>Free</strong><span>The core utilities are designed to be available without a subscription.</span></div>
+    </aside>
+  </section>
+
+  <section class="tf-faq" aria-labelledby="faq-heading">
+    <div class="tf-section-kicker">FAQ</div>
+    <h2 id="faq-heading">Frequently asked questions</h2>
+    <details><summary>Are the tools free to use?</summary><p>Yes. The current ToolForge core tools are provided for free and do not require an account.</p></details>
+    <details><summary>Are my images and PDFs uploaded?</summary><p>The image compressor, PDF merge and PDF split tools process selected files in the browser. See the Privacy Policy for the current data-handling details.</p></details>
+    <details><summary>Does the currency converter use live rates?</summary><p>It requests a current exchange rate from the external Frankfurter service when you press Convert. Rates can change and should be treated as informational.</p></details>
+    <details><summary>Can I use ToolForge on a phone?</summary><p>Yes. The layout is responsive and the tools are designed to work on modern desktop and mobile browsers.</p></details>
+    <details><summary>How does ToolForge make money?</summary><p>ToolForge is being prepared for ethical, policy-compliant monetization such as advertising. Monetization will not change the basic purpose of the tools.</p></details>
+  </section>
+
+  <div class="tf-ad-placeholder tf-ad-bottom" aria-label="Advertisement space">Advertisement</div>
+
+  <footer class="tf-footer">
+    <div class="tf-footer-grid">
+      <div>
+        <div class="tf-footer-brand">TOOL<span>FORGE</span></div>
+        <div class="tf-footer-copy">A collection of simple online utilities for everyday tasks — conversions, text tools, image compression and PDF tools in one clean place.</div>
+      </div>
+      <div>
+        <div class="tf-footer-title">Popular Tools</div>
+        <div class="tf-footer-links">
+          <a href="#" data-footer-tool="converter">Unit Converter</a>
+          <a href="#" data-footer-tool="currency">Currency Converter</a>
+          <a href="#" data-footer-tool="compressor">Image Compressor</a>
+          <a href="#" data-footer-tool="pdfmerge">PDF Merge</a>
+        </div>
+      </div>
+      <div>
+        <div class="tf-footer-title">About</div>
+        <div class="tf-footer-links">
+          <span>Built & maintained by ToolForge</span>
+          <span>Designed for fast everyday use</span>
+          <span>Your selected local files stay in your browser for supported tools</span>
+          <a href="about.html">About ToolForge</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms of Use</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="tf-footer-bottom">
+      <span>© 2026 ToolForge. All rights reserved.</span>
+      <span>FREE ONLINE TOOLS • FAST • SIMPLE • PRIVATE</span>
+    </div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script>
+(function(){
+  const root = document.getElementById('tf-root');
+
+  // --- Navigation ---
+  const navBtns = root.querySelectorAll('.tf-nav-btn');
+  const panels = root.querySelectorAll('.tf-panel');
+  navBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      navBtns.forEach(b => b.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      root.querySelector(`.tf-panel[data-panel="${btn.dataset.tool}"]`).classList.add('active');
+    });
+  });
+
+  root.querySelectorAll('[data-footer-tool]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const tool = link.dataset.footerTool;
+      const btn = root.querySelector(`.tf-nav-btn[data-tool="${tool}"]`);
+      if (btn) {
+        btn.click();
+        root.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  root.querySelectorAll('.tf-tool-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const btn = root.querySelector(`.tf-nav-btn[data-tool="${card.dataset.tool}"]`);
+      if (btn) { btn.click(); btn.scrollIntoView({ behavior:'smooth', block:'center' }); }
+    });
+  });
+
+  // --- Unit Converter ---
+  const UNITS = {
+    length: { m: 1, km: 1000, cm: 0.01, mm: 0.001, mile: 1609.34, yard: 0.9144, foot: 0.3048, inch: 0.0254 },
+    weight: { kg: 1, g: 0.001, mg: 0.000001, lb: 0.453592, oz: 0.0283495, ton: 1000 }
+  };
+  const ucCategory = document.getElementById('uc-category');
+  const ucFrom = document.getElementById('uc-from');
+  const ucTo = document.getElementById('uc-to');
+  const ucValue = document.getElementById('uc-value');
+  const ucResult = document.getElementById('uc-result');
+
+  function populateUnitDropdowns(){
+    const cat = ucCategory.value;
+    ucFrom.innerHTML = ''; ucTo.innerHTML = '';
+    if (cat === 'temp'){
+      ['celsius','fahrenheit','kelvin'].forEach(u => {
+        ucFrom.appendChild(new Option(u, u));
+        ucTo.appendChild(new Option(u, u));
+      });
+      ucTo.value = 'fahrenheit';
+    } else {
+      Object.keys(UNITS[cat]).forEach(u => {
+        ucFrom.appendChild(new Option(u, u));
+        ucTo.appendChild(new Option(u, u));
+      });
+      ucTo.selectedIndex = 1;
+    }
+    convert();
+  }
+
+  function convertTemp(val, from, to){
+    let celsius;
+    if (from === 'celsius') celsius = val;
+    else if (from === 'fahrenheit') celsius = (val - 32) * 5/9;
+    else celsius = val - 273.15;
+    if (to === 'celsius') return celsius;
+    if (to === 'fahrenheit') return celsius * 9/5 + 32;
+    return celsius + 273.15;
+  }
+
+  function convert(){
+    const cat = ucCategory.value;
+    const val = parseFloat(ucValue.value);
+    if (isNaN(val)) { ucResult.textContent = 'Enter a valid number.'; return; }
+    let result;
+    if (cat === 'temp'){
+      result = convertTemp(val, ucFrom.value, ucTo.value);
+    } else {
+      const base = val * UNITS[cat][ucFrom.value];
+      result = base / UNITS[cat][ucTo.value];
+    }
+    ucResult.textContent = `${val} ${ucFrom.value} = ${result.toFixed(4).replace(/\.?0+$/, '')} ${ucTo.value}`;
+  }
+
+  ucCategory.addEventListener('change', populateUnitDropdowns);
+  [ucFrom, ucTo, ucValue].forEach(el => el.addEventListener('input', convert));
+  populateUnitDropdowns();
+
+  // --- Currency Converter ---
+  const CURRENCIES = ['USD','EUR','GBP','PKR','SAR','AED','CNY','JPY','INR','AUD','CAD'];
+  const ccAmount = document.getElementById('cc-amount');
+  const ccFrom = document.getElementById('cc-from');
+  const ccTo = document.getElementById('cc-to');
+  const ccResult = document.getElementById('cc-result');
+  const ccConvertBtn = document.getElementById('cc-convert-btn');
+  const ccSwap = document.getElementById('cc-swap');
+
+  CURRENCIES.forEach(c => {
+    ccFrom.appendChild(new Option(c, c));
+    ccTo.appendChild(new Option(c, c));
+  });
+  ccFrom.value = 'USD';
+  ccTo.value = 'PKR';
+
+  ccSwap.addEventListener('click', () => {
+    const tmp = ccFrom.value; ccFrom.value = ccTo.value; ccTo.value = tmp;
+    doCurrencyConvert();
+  });
+
+  async function doCurrencyConvert(){
+    const amount = parseFloat(ccAmount.value);
+    if (!Number.isFinite(amount) || amount <= 0) {
+      ccResult.textContent = 'Enter a valid amount greater than 0.';
+      return;
+    }
+
+    const from = ccFrom.value, to = ccTo.value;
+    if (from === to) {
+      ccResult.textContent = `${amount} ${from} = ${amount.toFixed(2)} ${to}`;
+      return;
+    }
+
+    ccResult.textContent = 'Fetching live rate…';
+    ccConvertBtn.disabled = true;
+
+    try {
+      // Frankfurter's current API is v2. It returns the rate for one currency pair.
+      const res = await fetch(`https://api.frankfurter.dev/v2/rate/${encodeURIComponent(from)}/${encodeURIComponent(to)}`, {
+        headers: { 'Accept': 'application/json' },
+        cache: 'no-store'
+      });
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const data = await res.json();
+      const rate = Number(data.rate);
+
+      if (!Number.isFinite(rate)) throw new Error('Invalid rate');
+
+      const converted = amount * rate;
+      ccResult.textContent = `${amount} ${from} = ${converted.toFixed(2)} ${to}`;
+    } catch (e) {
+      console.error('Currency conversion failed:', e);
+      ccResult.textContent = 'Could not fetch the live rate. Please try again.';
+    } finally {
+      ccConvertBtn.disabled = false;
+    }
+  }
+  ccConvertBtn.addEventListener('click', doCurrencyConvert);
+
+  // --- Word Counter ---
+  const wcText = document.getElementById('wc-text');
+  const wcWords = document.getElementById('wc-words');
+  const wcChars = document.getElementById('wc-chars');
+  const wcSentences = document.getElementById('wc-sentences');
+  wcText.addEventListener('input', () => {
+    const text = wcText.value;
+    const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+    const sentences = text.trim() === '' ? 0 : (text.match(/[.!?]+/g) || []).length;
+    wcWords.textContent = words;
+    wcChars.textContent = text.length;
+    wcSentences.textContent = sentences;
+  });
+
+  // --- Password Generator ---
+  const pwLength = document.getElementById('pw-length');
+  const pwLenVal = document.getElementById('pw-len-val');
+  const pwUpper = document.getElementById('pw-upper');
+  const pwNumbers = document.getElementById('pw-numbers');
+  const pwSymbols = document.getElementById('pw-symbols');
+  const pwGenerate = document.getElementById('pw-generate');
+  const pwResult = document.getElementById('pw-result');
+
+  pwLength.addEventListener('input', () => pwLenVal.textContent = pwLength.value);
+
+  pwGenerate.addEventListener('click', () => {
+    const lower = 'abcdefghijklmnopqrstuvwxyz';
+    const upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const nums = '0123456789';
+    const syms = '!@#$%^&*()_+-=[]{}';
+    let charset = lower;
+    if (pwUpper.checked) charset += upper;
+    if (pwNumbers.checked) charset += nums;
+    if (pwSymbols.checked) charset += syms;
+
+    const len = parseInt(pwLength.value, 10);
+    const arr = new Uint32Array(len);
+    crypto.getRandomValues(arr);
+    let pass = '';
+    for (let i = 0; i < len; i++){
+      pass += charset[arr[i] % charset.length];
+    }
+    pwResult.textContent = pass;
+  });
+
+  // --- Reliable local download helper ---
+  function setDownloadLink(link, blob, filename, label){
+    if (link.dataset.objectUrl) URL.revokeObjectURL(link.dataset.objectUrl);
+    const url = URL.createObjectURL(blob);
+    link.href = url;
+    link.download = filename;
+    link.textContent = label || ('Download ' + filename);
+    link.style.display = 'inline-block';
+    link.dataset.objectUrl = url;
+    return link;
+  }
+
+  function clearDownloadLink(link){
+    if (link.dataset.objectUrl) URL.revokeObjectURL(link.dataset.objectUrl);
+    link.removeAttribute('href');
+    link.removeAttribute('download');
+    delete link.dataset.objectUrl;
+    link.style.display = 'none';
+  }
+
+  // --- Image Compressor ---
+  const icFile = document.getElementById('ic-file');
+  const icQuality = document.getElementById('ic-quality');
+  const icQualityVal = document.getElementById('ic-quality-val');
+  const icPreview = document.getElementById('ic-preview');
+  const icResult = document.getElementById('ic-result');
+  const icDownload = document.getElementById('ic-download');
+  let compressedDataUrl = null;
+  let originalSize = 0;
+
+  icQuality.addEventListener('input', () => {
+    icQualityVal.textContent = icQuality.value + '%';
+    if (icFile.files[0]) processImage(icFile.files[0]);
+  });
+
+  icFile.addEventListener('change', () => {
+    if (icFile.files[0]){
+      originalSize = icFile.files[0].size;
+      processImage(icFile.files[0]);
+    }
+  });
+
+  function processImage(file){
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+        const quality = parseInt(icQuality.value, 10) / 100;
+        compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+        icPreview.src = compressedDataUrl;
+        icPreview.style.display = 'block';
+
+        const compressedBytes = Math.round((compressedDataUrl.length * 3) / 4);
+        const savedPct = originalSize > 0 ? Math.max(0, Math.round((1 - compressedBytes/originalSize) * 100)) : 0;
+        icResult.textContent = `Original: ${(originalSize/1024).toFixed(1)} KB → Compressed: ${(compressedBytes/1024).toFixed(1)} KB (${savedPct}% smaller)`;
+        const parts = compressedDataUrl.split(',');
+        const binary = atob(parts[1]);
+        const bytes = new Uint8Array(binary.length);
+        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+        const blob = new Blob([bytes], { type: 'image/jpeg' });
+        setDownloadLink(icDownload, blob, 'compressed-image.jpg', 'Download compressed-image.jpg');
+      };
+      img.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+
+  // The image download control is a real <a download> element.
+  // This avoids synthetic clicks and works reliably for local/static hosting.
+  icDownload.addEventListener('click', (e) => {
+    if (!icDownload.href || icDownload.getAttribute('href') === '#') e.preventDefault();
+  });
+
+
+  // --- PDF Merge ---
+  const pmFilesInput = document.getElementById('pm-files');
+  const pmFilelist = document.getElementById('pm-filelist');
+  const pmEmpty = document.getElementById('pm-empty');
+  const pmMergeBtn = document.getElementById('pm-merge-btn');
+  const pmResult = document.getElementById('pm-result');
+  let pmSelectedFiles = [];
+
+  function renderMergeFiles(){
+    pmFilelist.innerHTML = '';
+    pmEmpty.style.display = pmSelectedFiles.length ? 'none' : 'block';
+
+    pmSelectedFiles.forEach((file, index) => {
+      const row = document.createElement('div');
+      row.style.cssText = 'display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid rgba(255,255,255,.10);border-radius:10px;background:rgba(255,255,255,.035);';
+
+      const number = document.createElement('span');
+      number.textContent = String(index + 1).padStart(2, '0');
+      number.style.cssText = 'font-weight:700;opacity:.65;min-width:28px;';
+
+      const name = document.createElement('span');
+      name.textContent = file.name;
+      name.title = file.name;
+      name.style.cssText = 'flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;';
+
+      const remove = document.createElement('button');
+      remove.type = 'button';
+      remove.textContent = '×';
+      remove.setAttribute('aria-label', `Remove ${file.name}`);
+      remove.title = 'Remove this PDF';
+      remove.style.cssText = 'border:0;background:transparent;color:inherit;font-size:22px;line-height:1;cursor:pointer;padding:2px 7px;border-radius:7px;opacity:.8;';
+      remove.addEventListener('click', () => {
+        pmSelectedFiles.splice(index, 1);
+        renderMergeFiles();
+        pmResult.textContent = '';
+      });
+
+      row.append(number, name, remove);
+      pmFilelist.appendChild(row);
+    });
+  }
+
+  pmFilesInput.addEventListener('change', () => {
+    const incoming = Array.from(pmFilesInput.files || []);
+    for (const file of incoming){
+      if (file.type !== 'application/pdf') continue;
+      const duplicate = pmSelectedFiles.some(f => f.name === file.name && f.size === file.size && f.lastModified === file.lastModified);
+      if (!duplicate) pmSelectedFiles.push(file);
+    }
+    pmFilesInput.value = '';
+    renderMergeFiles();
+    pmResult.textContent = '';
+  });
+
+  pmMergeBtn.addEventListener('click', async () => {
+    if (pmSelectedFiles.length < 2){
+      pmResult.textContent = 'Please choose at least two PDF files first.';
+      return;
+    }
+    pmResult.textContent = 'Merging...';
+    pmMergeBtn.disabled = true;
+    try {
+      if (!window.PDFLib) throw new Error('PDF library unavailable');
+      const { PDFDocument } = PDFLib;
+      const mergedPdf = await PDFDocument.create();
+      for (const file of pmSelectedFiles){
+        const bytes = await file.arrayBuffer();
+        const srcDoc = await PDFDocument.load(bytes);
+        const copiedPages = await mergedPdf.copyPages(srcDoc, srcDoc.getPageIndices());
+        copiedPages.forEach(p => mergedPdf.addPage(p));
+      }
+      const mergedBytes = await mergedPdf.save();
+      const blob = new Blob([mergedBytes], { type: 'application/pdf' });
+      pmResult.innerHTML = '';
+      pmResult.textContent = 'PDF ready: ';
+      const link = document.createElement('a');
+      link.className = 'tf-btn';
+      link.style.display = 'inline-block';
+      link.style.marginTop = '10px';
+      link.style.textDecoration = 'none';
+      pmResult.appendChild(setDownloadLink(link, blob, 'merged.pdf', 'Download merged.pdf'));
+    } catch(e){
+      pmResult.textContent = 'Could not merge these files. Make sure all selected files are valid PDFs.';
+    } finally {
+      pmMergeBtn.disabled = false;
+    }
+  });
+
+  // --- PDF Split / Extract ---
+  const psFile = document.getElementById('ps-file');
+  const psRange = document.getElementById('ps-range');
+  const psSplitBtn = document.getElementById('ps-split-btn');
+  const psResult = document.getElementById('ps-result');
+
+  function parseRange(rangeStr, maxPage){
+    const pages = new Set();
+    const parts = rangeStr.split(',').map(p => p.trim()).filter(Boolean);
+    for (const part of parts){
+      if (part.includes('-')){
+        const [start, end] = part.split('-').map(n => parseInt(n.trim(), 10));
+        if (!isNaN(start) && !isNaN(end)){
+          for (let i = start; i <= end; i++) if (i >= 1 && i <= maxPage) pages.add(i - 1);
+        }
+      } else {
+        const n = parseInt(part, 10);
+        if (!isNaN(n) && n >= 1 && n <= maxPage) pages.add(n - 1);
+      }
+    }
+    return Array.from(pages).sort((a,b) => a-b);
+  }
+
+  psSplitBtn.addEventListener('click', async () => {
+    if (!psFile.files[0]){ psResult.textContent = 'Choose a PDF file first.'; return; }
+    if (!psRange.value.trim()){ psResult.textContent = 'Enter a page range, e.g. 1-3,5'; return; }
+    psResult.textContent = 'Extracting...';
+    try {
+      if (!window.PDFLib) throw new Error('PDF library unavailable');
+      const { PDFDocument } = PDFLib;
+      const bytes = await psFile.files[0].arrayBuffer();
+      const srcDoc = await PDFDocument.load(bytes);
+      const maxPage = srcDoc.getPageCount();
+      const indices = parseRange(psRange.value, maxPage);
+      if (!indices.length){ psResult.textContent = `Enter valid page numbers between 1 and ${maxPage}.`; return; }
+      const newDoc = await PDFDocument.create();
+      const copiedPages = await newDoc.copyPages(srcDoc, indices);
+      copiedPages.forEach(p => newDoc.addPage(p));
+      const newBytes = await newDoc.save();
+      const blob = new Blob([newBytes], { type: 'application/pdf' });
+      psResult.innerHTML = '';
+      psResult.textContent = 'PDF ready: ';
+      const link = document.createElement('a');
+      link.className = 'tf-btn';
+      link.style.display = 'inline-block';
+      link.style.marginTop = '10px';
+      link.style.textDecoration = 'none';
+      psResult.appendChild(setDownloadLink(link, blob, 'extracted.pdf', 'Download extracted.pdf'));
+    } catch(e){
+      psResult.textContent = 'Could not process this PDF.';
+    }
+  });
+})();
+</script>
+</body>
+</html>

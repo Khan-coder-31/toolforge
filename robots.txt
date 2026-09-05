@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toolforge.jaw1745234.workers.dev/sitemap.xml
