@@ -2,33 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://toolforge.jaw1745234.workers.dev/</loc>
+    <loc>https://khan-coder-31.github.io/toolforge/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://toolforge.jaw1745234.workers.dev/about.html</loc>
+    <loc>https://khan-coder-31.github.io/toolforge/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://toolforge.jaw1745234.workers.dev/contact.html</loc>
+    <loc>https://khan-coder-31.github.io/toolforge/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://toolforge.jaw1745234.workers.dev/privacy.html</loc>
+    <loc>https://khan-coder-31.github.io/toolforge/privacy.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://toolforge.jaw1745234.workers.dev/terms.html</loc>
+    <loc>https://khan-coder-31.github.io/toolforge/terms.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://khan-coder-31.github.io/toolforge/currency-converter.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

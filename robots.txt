@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toolforge.jaw1745234.workers.dev/sitemap.xml
+Sitemap: https://khan-coder-31.github.io/toolforge/sitemap.xml
