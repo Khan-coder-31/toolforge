@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Word Counter Online – Free Word & Character Counter | ToolForge</title>
+  <meta name="description" content="Use a free word counter online to count words, characters and text quickly. Learn how an online word counter and text word counter can help with writing, essays and content.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khan-coder-31.github.io/toolforge/word-counter.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Word Counter Online – Free Word & Character Counter">
+  <meta property="og:description" content="Learn how to use a free word counter online to check words, characters and text quickly with ToolForge.">
+  <meta property="og:url" content="https://khan-coder-31.github.io/toolforge/word-counter.html">
+  <meta property="og:site_name" content="ToolForge">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Word Counter Online – Free Word & Character Counter">
+  <meta name="twitter:description" content="A practical guide to using an online word counter and text word counter for everyday writing.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Word Counter Online – Free Word & Character Counter",
+    "description": "A practical guide to using an online word counter and text word counter for everyday writing.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://khan-coder-31.github.io/toolforge/word-counter.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolForge",
+      "url": "https://khan-coder-31.github.io/toolforge/index.html"
+    },
+    "datePublished": "2026-09-09",
+    "dateModified": "2026-09-09"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ToolForge",
+        "item": "https://khan-coder-31.github.io/toolforge/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Word Counter Guide",
+        "item": "https://khan-coder-31.github.io/toolforge/word-counter.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #626262;
+      --border: #e5e5e5;
+      --accent: #111111;
+      --soft: #f0f0f0;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 1.15rem;
+    }
+
+    .back-link {
+      text-decoration: none;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 58px 22px 80px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.15rem, 6vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      margin: 0 0 18px;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 38px;
+    }
+
+    .toc,
+    .tool-card,
+    .note,
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .toc {
+      padding: 22px 24px;
+      margin: 0 0 42px;
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc a {
+      text-decoration: none;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    article h2 {
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin: 46px 0 14px;
+    }
+
+    article h3 {
+      font-size: 1.2rem;
+      margin: 30px 0 10px;
+    }
+
+    article p { margin: 0 0 18px; }
+
+    article ul,
+    article ol {
+      margin: 0 0 22px;
+      padding-left: 24px;
+    }
+
+    .tool-card {
+      padding: 28px;
+      margin: 28px 0;
+    }
+
+    .tool-card h2 {
+      margin-top: 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .button:hover { opacity: 0.88; }
+
+    .note {
+      padding: 20px 22px;
+      margin: 24px 0;
+      background: var(--soft);
+    }
+
+    .faq-item {
+      padding: 20px 22px;
+      margin: 12px 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+    }
+
+    .related {
+      border-top: 1px solid var(--border);
+      margin-top: 54px;
+      padding-top: 30px;
+    }
+
+    .related a {
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 15px 16px; }
+      main { padding: 40px 16px 60px; }
+      .intro { font-size: 1.05rem; }
+      .toc, .tool-card, .note, .faq-item { border-radius: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">TOOL FORGE</a>
+      <a class="back-link" href="index.html">← Back to tools</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="eyebrow">ToolForge Guide</div>
+
+    <h1>Word Counter Online – Free Word & Character Counter</h1>
+
+    <p class="intro">
+      Need to check how many words are in your writing? A word counter online can
+      quickly count words and characters in an essay, article, assignment, transcript,
+      or any other text. This guide explains how an online word counter works and how
+      to use ToolForge for quick text checks.
+    </p>
+
+    <div class="meta">Published September 9, 2026 · ToolForge</div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <strong>In this guide</strong>
+      <ul>
+        <li><a href="#what-is-word-counter">What is a word counter?</a></li>
+        <li><a href="#why-use">Why use an online word counter?</a></li>
+        <li><a href="#how-to-use">How to use a word counter online</a></li>
+        <li><a href="#free-word-counter">Using a free word counter for writing</a></li>
+        <li><a href="#text-word-counter">What is a text word counter?</a></li>
+        <li><a href="#tips">Word counting tips</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <section id="what-is-word-counter">
+        <h2>What is a word counter?</h2>
+        <p>
+          A word counter is a tool that calculates the number of words in a piece of
+          text. Many word counters also show character counts, making them useful when
+          a writing task has both word and character limits.
+        </p>
+        <p>
+          Students, writers, bloggers, editors, researchers, content creators, and
+          social media users can use a word counter to check text length before
+          submitting or publishing their work.
+        </p>
+      </section>
+
+      <section id="why-use">
+        <h2>Why use an online word counter?</h2>
+        <p>
+          An online word counter makes it easy to check text without manually counting
+          every word. You can paste or type your content into a browser-based tool and
+          get a quick count.
+        </p>
+
+        <ul>
+          <li>Check an essay or assignment word limit.</li>
+          <li>Measure the length of an article or blog post.</li>
+          <li>Check characters for forms and social media limits.</li>
+          <li>Review transcripts or other large blocks of text.</li>
+          <li>Quickly compare the length of different drafts.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Tip:</strong> If a task specifies a maximum or minimum word count,
+          check your text before submitting it so you can make any necessary edits.
+        </div>
+      </section>
+
+      <section id="how-to-use">
+        <h2>How to Use a Word Counter Online</h2>
+        <p>
+          Using a word counter online is simple. Paste your text into the ToolForge
+          Word Counter and review the word and character totals shown by the tool.
+        </p>
+
+        <ol>
+          <li>Open the ToolForge Word Counter.</li>
+          <li>Type or paste your text into the text area.</li>
+          <li>Review the total word count.</li>
+          <li>Check the character count when you need it.</li>
+          <li>Edit your text if you need to meet a specific limit.</li>
+        </ol>
+
+        <div class="tool-card">
+          <h2>Try the ToolForge Word Counter</h2>
+          <p>
+            Count words and characters quickly with the free ToolForge Word Counter.
+            It is useful for essays, articles, assignments, drafts, transcripts, and
+            everyday text checking.
+          </p>
+          <a class="button" href="index.html#word-counter">
+            Open Word Counter
+          </a>
+        </div>
+      </section>
+
+      <section id="free-word-counter">
+        <h2>Using a free word counter for writing</h2>
+        <p>
+          A free word counter can be useful whenever you need a quick text-length
+          check without installing software or creating an account. For many everyday
+          writing tasks, seeing the word and character totals is enough to keep a draft
+          within the required limits.
+        </p>
+
+        <h3>Students and assignments</h3>
+        <p>
+          Essays, reports, applications, and assignments often have word limits. A
+          free word counter can help students check their draft before submitting it.
+        </p>
+
+        <h3>Blog posts and articles</h3>
+        <p>
+          Writers can use word counts to compare drafts, plan article length, and make
+          sure a piece of content is not significantly shorter or longer than intended.
+        </p>
+
+        <h3>Social media and short-form content</h3>
+        <p>
+          Character counts can be just as useful as word counts when a platform or form
+          has a character limit.
+        </p>
+      </section>
+
+      <section id="text-word-counter">
+        <h2>What is a text word counter?</h2>
+        <p>
+          A text word counter is a word-counting tool designed to analyze a block of
+          written text. Depending on the tool, it may provide word count, character
+          count, and other basic text statistics.
+        </p>
+        <p>
+          This can be especially helpful for long text such as articles, transcripts,
+          notes, essays, and drafts where estimating the length by eye is difficult.
+        </p>
+      </section>
+
+      <section id="tips">
+        <h2>Word counting tips</h2>
+
+        <h3>1. Check the requirement first</h3>
+        <p>
+          Different assignments and platforms may define their limits differently.
+          Always follow the specific instructions for the task.
+        </p>
+
+        <h3>2. Check characters as well as words</h3>
+        <p>
+          If a form gives you a character limit rather than a word limit, use the
+          character count to make sure your text fits.
+        </p>
+
+        <h3>3. Remove unnecessary text</h3>
+        <p>
+          If your draft is too long, remove repetition and unnecessary wording while
+          keeping the important information and meaning.
+        </p>
+
+        <h3>4. Keep readability in mind</h3>
+        <p>
+          Reaching a particular word count should not be the only goal. Clear,
+          useful, and readable writing is more important than adding words simply to
+          increase a number.
+        </p>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-item">
+          <h3>What is an online word counter?</h3>
+          <p>
+            An online word counter is a browser-based tool that counts the words in
+            text and may also provide character counts and other basic statistics.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is there a free word counter online?</h3>
+          <p>
+            Yes. ToolForge provides a free word counter for quickly checking words and
+            characters in text.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the difference between a word counter online and an online word counter?</h3>
+          <p>
+            Both phrases describe the same general type of browser-based tool: a tool
+            that counts words in text. The wording is simply different.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can a text word counter count characters?</h3>
+          <p>
+            Many text word counters also provide character counts. ToolForge's Word
+            Counter is designed to help you check both words and characters.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use a word counter for an essay?</h3>
+          <p>
+            Yes. A word counter is useful for checking essay length and making sure
+            your draft is within a required word limit.
+          </p>
+        </div>
+      </section>
+
+      <section class="related">
+        <h2>More useful tools</h2>
+        <p>
+          Visit the
+          <a href="index.html">ToolForge online tools</a>
+          collection for the Word Counter, Unit Converter, Currency Converter,
+          Password Generator, Image Compressor, PDF tools, and more.
+        </p>
+
+        <p>
+          You can also read the
+          <a href="unit-converter.html">
+            Unit Converter Guide
+          </a>
+          and
+          <a href="currency-converter.html">
+            Currency Converter Guide
+          </a>.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 ToolForge · Free online tools for everyday tasks
+  </footer>
+</body>
+</html>

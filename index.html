@@ -6,6 +6,7 @@
 <title>Free Online Tools — Unit Converter, PDF Tools, Image Compressor & More</title>
 <meta name="description" content="Free online tools for unit conversion, currency conversion, word counting, password generation, image compression, PDF merging and PDF splitting. Fast and easy to use.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://khan-coder-31.github.io/toolforge/index.html">
 <meta name="theme-color" content="#08111f">
 <meta name="author" content="ToolForge">
 <meta name="application-name" content="ToolForge">
@@ -38,6 +39,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="ToolForge — Free Online Tools">
 <meta property="og:description" content="Unit & currency conversion, word counter, password generator, image compressor, and PDF tools — free, no sign-up, runs in your browser.">
+<meta property="og:url" content="https://khan-coder-31.github.io/toolforge/index.html">
+<meta property="og:site_name" content="ToolForge">
 <meta property="og:image" content="og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -51,6 +54,10 @@
 html,body{margin:0;min-height:100%;background:#050b14;}
 body{padding:18px 14px;}
 @media(max-width:520px){body{padding:8px 6px;}}
+
+  .tf-article-link{margin:10px 0 14px;}
+  .tf-article-link a{display:inline-block;padding:9px 13px;border:1px solid rgba(255,255,255,.14);border-radius:9px;color:inherit;text-decoration:none;font-size:13px;font-weight:600;background:rgba(255,255,255,.04);}
+  .tf-article-link a:hover{text-decoration:underline;}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -604,6 +611,10 @@ body{padding:18px 14px;}
     .tf-stats-grid { grid-template-columns: 1fr; }
     .tf-tool-grid { grid-template-columns:1fr; }
   }
+
+  .tf-tool-card-wrap{display:flex;flex-direction:column;gap:8px;}
+  .tf-guide-link{display:inline-block;color:inherit;text-decoration:underline;font-size:13px;font-weight:600;padding:2px 4px;}
+  .tf-guide-link:hover{opacity:.7;}
 </style>
 </head>
 <body>
@@ -620,7 +631,7 @@ body{padding:18px 14px;}
     </div>
   </div>
 
-  <div class="tf-nav" id="tf-nav">
+  <div class="tf-nav" id="tf-nav" role="tablist" aria-label="Choose a tool">
     <button class="tf-nav-btn active" data-tool="converter">Unit Converter</button>
     <button class="tf-nav-btn" data-tool="currency">Currency Converter</button>
     <button class="tf-nav-btn" data-tool="wordcount">Word Counter</button>
@@ -635,13 +646,13 @@ body{padding:18px 14px;}
     <h2 id="tools-heading">Free Online Tools for Everyday Tasks</h2>
     <p class="tf-section-intro">Choose a tool below. Your browser handles the supported file and text operations locally, while the currency converter uses a live exchange-rate service.</p>
     <div class="tf-tool-grid">
-      <button class="tf-tool-card" data-tool="converter"><span>01</span><strong>Unit Converter</strong><small>Convert length, weight and temperature units.</small></button>
-      <button class="tf-tool-card" data-tool="currency"><span>02</span><strong>Currency Converter</strong><small>Check exchange rates between supported currencies.</small></button>
-      <button class="tf-tool-card" data-tool="wordcount"><span>03</span><strong>Word Counter</strong><small>Count words, characters and sentences instantly.</small></button>
-      <button class="tf-tool-card" data-tool="password"><span>04</span><strong>Password Generator</strong><small>Create random passwords in your browser.</small></button>
-      <button class="tf-tool-card" data-tool="compressor"><span>05</span><strong>Image Compressor</strong><small>Reduce image size without uploading it.</small></button>
-      <button class="tf-tool-card" data-tool="pdfmerge"><span>06</span><strong>PDF Merge</strong><small>Combine multiple PDF files into one document.</small></button>
-      <button class="tf-tool-card" data-tool="pdfsplit"><span>07</span><strong>PDF Splitter</strong><small>Extract selected pages from a PDF file.</small></button>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="converter"><span>01</span><strong>Unit Converter</strong><small>Convert length, weight and temperature units.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="currency"><span>02</span><strong>Currency Converter</strong><small>Check exchange rates between supported currencies.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="wordcount"><span>03</span><strong>Word Counter</strong><small>Count words, characters and sentences instantly.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="password"><span>04</span><strong>Password Generator</strong><small>Create random passwords in your browser.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="compressor"><span>05</span><strong>Image Compressor</strong><small>Reduce image size without uploading it.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="pdfmerge"><span>06</span><strong>PDF Merge</strong><small>Combine multiple PDF files into one document.</small></button></div>
+      <div class="tf-tool-card-wrap"><button class="tf-tool-card" data-tool="pdfsplit"><span>07</span><strong>PDF Splitter</strong><small>Extract selected pages from a PDF file.</small></button></div>
     </div>
   </section>
 
@@ -651,6 +662,7 @@ body{padding:18px 14px;}
   <div class="tf-panel active" data-panel="converter">
     <div class="tf-panel-title"><span class="tf-panel-num">01</span><h3>Unit Converter</h3></div>
     <div class="desc">Convert length, weight, and temperature units instantly.</div>
+    <div class="tf-article-link"><a href="unit-converter.html">Read Unit Converter Guide →</a></div>
     <div class="tf-row">
       <select class="tf-select" id="uc-category">
         <option value="length">Length</option>
@@ -671,6 +683,7 @@ body{padding:18px 14px;}
   <div class="tf-panel" data-panel="currency">
     <div class="tf-panel-title"><span class="tf-panel-num">02</span><h3>Currency Converter</h3></div>
     <div class="desc">Convert currencies using live exchange rates.</div>
+    <div class="tf-article-link"><a href="currency-converter.html">Read Currency Converter Guide →</a></div>
     <div class="tf-row">
       <input type="number" class="tf-input grow" id="cc-amount" placeholder="Amount" value="1">
       <select class="tf-select" id="cc-from"></select>
@@ -679,13 +692,13 @@ body{padding:18px 14px;}
     </div>
     <button class="tf-btn" id="cc-convert-btn">Convert</button>
     <div class="tf-result" id="cc-result">Result will appear here.</div>
-    <a class="tf-btn" href="currency-converter.html" style="display:inline-block;margin-top:10px;text-decoration:none;">Read Currency Converter Guide</a>
   </div>
 
   <!-- WORD COUNTER -->
   <div class="tf-panel" data-panel="wordcount">
     <div class="tf-panel-title"><span class="tf-panel-num">03</span><h3>Word & Character Counter</h3></div>
     <div class="desc">Paste or type text to see live word, character, and sentence counts.</div>
+    <div class="tf-article-link"><a href="word-counter.html">Read Word Counter Guide →</a></div>
     <textarea class="tf-input" id="wc-text" placeholder="Start typing or paste your text..."></textarea>
     <div class="tf-stats-grid">
       <div class="tf-stat"><div class="num" id="wc-words">0</div><div class="lbl">Words</div></div>
@@ -698,6 +711,7 @@ body{padding:18px 14px;}
   <div class="tf-panel" data-panel="password">
     <div class="tf-panel-title"><span class="tf-panel-num">04</span><h3>Password Generator</h3></div>
     <div class="desc">Create a strong, random password directly in your browser.</div>
+    <div class="tf-article-link"><a href="password-generator.html">Read Password Generator Guide →</a></div>
     <div class="tf-row">
       <label style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;">Length: <b id="pw-len-val" style="color:var(--text)">16</b></label>
       <input type="range" id="pw-length" min="6" max="32" value="16" style="flex:1;">
@@ -715,12 +729,13 @@ body{padding:18px 14px;}
   <div class="tf-panel" data-panel="compressor">
     <div class="tf-panel-title"><span class="tf-panel-num">05</span><h3>Image Compressor</h3></div>
     <div class="desc">Reduce image file size in your browser — nothing is uploaded.</div>
+    <div class="tf-article-link"><a href="image-compressor.html">Read Image Compressor Guide →</a></div>
     <input type="file" class="tf-input" id="ic-file" accept="image/*">
     <div class="tf-row" style="margin-top:12px;">
       <label style="font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace;">Quality: <b id="ic-quality-val" style="color:var(--text)">70%</b></label>
       <input type="range" id="ic-quality" min="10" max="100" value="70" style="flex:1;">
     </div>
-    <img class="tf-preview-img" id="ic-preview" style="display:none;">
+    <img class="tf-preview-img" id="ic-preview" alt="Preview of the compressed image" style="display:none;">
     <div class="tf-result" id="ic-result">Choose an image to begin.</div>
     <a class="tf-btn" id="ic-download" style="display:none;margin-top:10px;text-decoration:none;" href="#" download="compressed-image.jpg">Download compressed-image.jpg</a>
   </div>
@@ -729,6 +744,7 @@ body{padding:18px 14px;}
   <div class="tf-panel" data-panel="pdfmerge">
     <div class="tf-panel-title"><span class="tf-panel-num">06</span><h3>PDF Merge</h3></div>
     <div class="desc">Combine as many PDF files as you need. Add 2, 3, 10 or more files, arrange them in your selected order, and remove any file with one click.</div>
+    <div class="tf-article-link"><a href="pdf-merge.html">Read PDF Merge Guide →</a></div>
 
     <input type="file" class="tf-input" id="pm-files" accept="application/pdf" multiple>
     <div id="pm-filelist" style="margin-top:12px;display:flex;flex-direction:column;gap:8px;"></div>
@@ -742,6 +758,7 @@ body{padding:18px 14px;}
   <div class="tf-panel" data-panel="pdfsplit">
     <div class="tf-panel-title"><span class="tf-panel-num">07</span><h3>PDF Split / Extract</h3></div>
     <div class="desc">Extract selected PDF pages into a new file, e.g. “1-3,5”.</div>
+    <div class="tf-article-link"><a href="pdf-split.html">Read PDF Split Guide →</a></div>
     <input type="file" class="tf-input" id="ps-file" accept="application/pdf">
     <div class="tf-row" style="margin-top:10px;">
       <input type="text" class="tf-input grow" id="ps-range" placeholder="Page range, e.g. 1-3,5">
@@ -823,6 +840,15 @@ body{padding:18px 14px;}
   const root = document.getElementById('tf-root');
 
   // --- Navigation ---
+  const hashAliases = {
+    "unit-converter": "converter",
+    "currency-converter": "currency",
+    "word-counter": "wordcount",
+    "password-generator": "password",
+    "image-compressor": "compressor",
+    "pdf-merge": "pdfmerge",
+    "pdf-split": "pdfsplit"
+  };
   const navBtns = root.querySelectorAll('.tf-nav-btn');
   const panels = root.querySelectorAll('.tf-panel');
   navBtns.forEach(btn => {
@@ -852,6 +878,16 @@ body{padding:18px 14px;}
       if (btn) { btn.click(); btn.scrollIntoView({ behavior:'smooth', block:'center' }); }
     });
   });
+
+  function activateToolFromHash() {
+    const raw = window.location.hash.replace(/^#/, '').toLowerCase();
+    const tool = hashAliases[raw] || raw;
+    if (!tool) return;
+    const btn = root.querySelector(`.tf-nav-btn[data-tool="${tool}"]`);
+    if (btn) btn.click();
+  }
+  window.addEventListener('hashchange', activateToolFromHash);
+  activateToolFromHash();
 
   // --- Unit Converter ---
   const UNITS = {

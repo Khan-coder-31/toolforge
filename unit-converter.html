@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Unit Converter: Convert Length, Weight, Temperature & More | ToolForge</title>
+  <meta name="description" content="Learn how unit conversion works and how to convert length, weight, temperature, area, volume and other measurements online with ToolForge.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://khan-coder-31.github.io/toolforge/unit-converter.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Unit Converter: Convert Length, Weight, Temperature & More">
+  <meta property="og:description" content="A simple guide to unit conversion and using an online unit converter for everyday measurements.">
+  <meta property="og:url" content="https://khan-coder-31.github.io/toolforge/unit-converter.html">
+  <meta property="og:site_name" content="ToolForge">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Unit Converter: Convert Length, Weight, Temperature & More">
+  <meta name="twitter:description" content="Learn how unit conversion works and use the free ToolForge Unit Converter.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Unit Converter: Convert Length, Weight, Temperature & More",
+    "description": "A simple guide to unit conversion and using an online unit converter for everyday measurements.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://khan-coder-31.github.io/toolforge/unit-converter.html"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ToolForge",
+      "url": "https://khan-coder-31.github.io/toolforge/index.html"
+    },
+    "datePublished": "2026-09-09",
+    "dateModified": "2026-09-09"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "ToolForge",
+        "item": "https://khan-coder-31.github.io/toolforge/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Unit Converter Guide",
+        "item": "https://khan-coder-31.github.io/toolforge/unit-converter.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #626262;
+      --border: #e5e5e5;
+      --accent: #111111;
+      --soft: #f0f0f0;
+      --max: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    a { color: inherit; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1120px;
+      margin: auto;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      font-size: 1.15rem;
+    }
+
+    .back-link {
+      text-decoration: none;
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 58px 22px 80px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.15rem, 6vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      margin: 0 0 18px;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0 0 18px;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 38px;
+    }
+
+    .toc,
+    .tool-card,
+    .note,
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .toc {
+      padding: 22px 24px;
+      margin: 0 0 42px;
+    }
+
+    .toc strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .toc ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .toc a {
+      text-decoration: none;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    article h2 {
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin: 46px 0 14px;
+    }
+
+    article h3 {
+      font-size: 1.2rem;
+      margin: 30px 0 10px;
+    }
+
+    article p { margin: 0 0 18px; }
+
+    article ul,
+    article ol {
+      margin: 0 0 22px;
+      padding-left: 24px;
+    }
+
+    .tool-card {
+      padding: 28px;
+      margin: 28px 0;
+    }
+
+    .tool-card h2 {
+      margin-top: 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 18px;
+      border-radius: 10px;
+      margin-top: 6px;
+    }
+
+    .button:hover { opacity: 0.88; }
+
+    .note {
+      padding: 20px 22px;
+      margin: 24px 0;
+      background: var(--soft);
+    }
+
+    .faq-item {
+      padding: 20px 22px;
+      margin: 12px 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 8px;
+    }
+
+    .related {
+      border-top: 1px solid var(--border);
+      margin-top: 54px;
+      padding-top: 30px;
+    }
+
+    .related a {
+      font-weight: 700;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { padding: 15px 16px; }
+      main { padding: 40px 16px 60px; }
+      .intro { font-size: 1.05rem; }
+      .toc, .tool-card, .note, .faq-item { border-radius: 12px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">TOOL FORGE</a>
+      <a class="back-link" href="index.html">← Back to tools</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="eyebrow">ToolForge Guide</div>
+
+    <h1>Unit Converter: Convert Length, Weight, Temperature & More</h1>
+
+    <p class="intro">
+      Need to convert kilometers to miles, kilograms to pounds, Celsius to Fahrenheit,
+      or another measurement? This guide explains how unit conversion works and how
+      to use a unit converter online quickly and easily.
+    </p>
+
+    <div class="meta">Published September 9, 2026 · ToolForge</div>
+
+    <nav class="toc" aria-label="Table of contents">
+      <strong>In this guide</strong>
+      <ul>
+        <li><a href="#what-is-unit-conversion">What is unit conversion?</a></li>
+        <li><a href="#common-conversions">Common unit conversions</a></li>
+        <li><a href="#how-to-convert">How to convert units online</a></li>
+        <li><a href="#conversion-formulas">How unit conversion formulas work</a></li>
+        <li><a href="#tips">Useful unit conversion tips</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ul>
+    </nav>
+
+    <article>
+      <section id="what-is-unit-conversion">
+        <h2>What is unit conversion?</h2>
+        <p>
+          Unit conversion is the process of changing a measurement from one unit into
+          another unit without changing the underlying quantity. For example, a
+          distance can be expressed in kilometers or miles, while a weight can be
+          expressed in kilograms or pounds.
+        </p>
+        <p>
+          Unit converters are useful for travel, schoolwork, engineering, shopping,
+          cooking, fitness, construction, science, and everyday calculations. An
+          online converter can save time when you need to switch between measurement
+          systems or compare values quickly.
+        </p>
+      </section>
+
+      <section id="common-conversions">
+        <h2>Common unit conversions</h2>
+        <p>
+          Different situations require different types of conversions. Some of the
+          most common categories include length, weight, temperature, area, volume,
+          speed, and time.
+        </p>
+
+        <h3>Length</h3>
+        <p>
+          Common length conversions include kilometers to miles, meters to feet,
+          centimeters to inches, and inches to centimeters.
+        </p>
+
+        <h3>Weight and mass</h3>
+        <p>
+          Common weight conversions include kilograms to pounds, pounds to kilograms,
+          grams to ounces, and ounces to grams.
+        </p>
+
+        <h3>Temperature</h3>
+        <p>
+          Temperature is commonly converted between Celsius, Fahrenheit, and Kelvin.
+          Temperature conversions use different formulas from simple length or weight
+          conversions.
+        </p>
+
+        <h3>Area and volume</h3>
+        <p>
+          Area may be expressed in square meters, square feet, acres, or other units.
+          Volume can be measured in liters, milliliters, gallons, cubic meters, and
+          other units depending on the situation.
+        </p>
+
+        <div class="note">
+          <strong>Tip:</strong> Always check whether a value represents length, area,
+          volume, mass, or another quantity before converting it. The correct
+          conversion factor depends on the type of measurement.
+        </div>
+      </section>
+
+      <section id="how-to-convert">
+        <h2>How to Use a Unit Converter Online</h2>
+        <p>
+          Using a unit converter online is usually simple. With ToolForge, enter the
+          value you want to convert, choose the original unit, choose the target unit,
+          and calculate the result.
+        </p>
+
+        <ol>
+          <li>Enter the measurement you want to convert.</li>
+          <li>Select the original unit.</li>
+          <li>Select the unit you want to convert to.</li>
+          <li>Run the conversion.</li>
+          <li>Check the resulting value and unit.</li>
+        </ol>
+
+        <div class="tool-card">
+          <h2>Try the ToolForge Unit Converter</h2>
+          <p>
+            Use the ToolForge online Unit Converter to quickly convert supported
+            measurements for everyday calculations, comparisons, study, and work.
+          </p>
+          <a class="button" href="index.html#unit-converter">
+            Open Unit Converter
+          </a>
+        </div>
+      </section>
+
+      <section id="conversion-formulas">
+        <h2>How do unit conversion formulas work?</h2>
+        <p>
+          Many unit conversions use a conversion factor. The basic idea is to multiply
+          the original value by a factor that represents the relationship between the
+          two units.
+        </p>
+
+        <p>
+          For example, because one kilometer equals 1,000 meters, converting 2
+          kilometers to meters means multiplying 2 by 1,000 to get 2,000 meters.
+        </p>
+
+        <p>
+          Some conversions, such as temperature conversions, require a formula rather
+          than a single multiplication factor. This is why it is important to select
+          the correct conversion category and units.
+        </p>
+      </section>
+
+      <section id="tips">
+        <h2>Useful unit conversion tips</h2>
+
+        <h3>1. Double-check the units</h3>
+        <p>
+          A correct number with the wrong unit can still produce a completely different
+          result. Always check both the starting unit and the target unit.
+        </p>
+
+        <h3>2. Keep track of decimal places</h3>
+        <p>
+          Some conversions produce long decimal values. For general use, rounding can
+          make a result easier to read, but keep enough precision when accuracy matters.
+        </p>
+
+        <h3>3. Choose the correct measurement category</h3>
+        <p>
+          Length, area, volume, mass, speed, and temperature are different quantities.
+          Make sure you are using the appropriate category before converting.
+        </p>
+
+        <h3>4. Use the same units when comparing values</h3>
+        <p>
+          If you are comparing two measurements, converting them into the same unit
+          makes the comparison much easier and helps prevent mistakes.
+        </p>
+
+        <h3>5. Verify important calculations</h3>
+        <p>
+          For engineering, construction, scientific work, financial decisions, or
+          other situations where precision is important, verify the result and use the
+          required level of precision for your task.
+        </p>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-item">
+          <h3>What is a unit converter?</h3>
+          <p>
+            A unit converter is a tool that changes a measurement from one unit into
+            another equivalent unit.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I convert kilometers to miles?</h3>
+          <p>
+            Enter the distance in kilometers, choose kilometers as the source unit,
+            select miles as the target unit, and calculate the conversion.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I convert kilograms to pounds?</h3>
+          <p>
+            Select kilograms as the original unit and pounds as the target unit, enter
+            the value, and run the conversion.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can a unit converter online convert Celsius to Fahrenheit?</h3>
+          <p>
+            Yes. Temperature conversion uses a formula that relates Celsius and
+            Fahrenheit, so a converter can calculate the corresponding value for you.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is there a free unit converter online?</h3>
+          <p>
+            Yes. ToolForge provides a free unit converter online for supported everyday
+            measurement conversions. The ToolForge core tools are designed to be free
+            to use without an account.
+          </p>
+        </div>
+      </section>
+
+      <section class="related">
+        <h2>More useful tools</h2>
+        <p>
+          Need another everyday utility? Visit the
+          <a href="index.html">ToolForge online tools</a>
+          collection for currency conversion, word counting, password generation,
+          image compression, PDF tools, and more.
+        </p>
+
+        <p>
+          You can also read the
+          <a href="currency-converter.html">
+            Currency Converter Guide
+          </a>
+          for more information about exchange rates and currency conversion, or the
+          <a href="word-counter.html">Word Counter Guide</a>
+          for checking text length.
+        </p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    © 2026 ToolForge · Free online tools for everyday tasks
+  </footer>
+</body>
+</html>
